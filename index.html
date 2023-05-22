@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Y.A.P 2023 - Career Guidance Seminar</title>
+    <style>
+        /* CSS Styles */
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #f2f2f2;
+            padding: 10px;
+            text-align: center;
+            font-size: 12px;
+            color: #555555;
+        }
+
+        .banner {
+            text-align: center;
+        }
+
+        .banner img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .form-heading {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .description {
+            font-size: 16px;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #dddddd;
+            border-radius: 5px;
+        }
+
+        .form-question {
+            margin-bottom: 10px;
+        }
+
+        .form-question label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-question input[type="text"],
+        .form-question select {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #cccccc;
+            border-radius: 3px;
+        }
+
+        .form-question .error-message {
+            color: red;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        .form-question .note {
+            font-size: 12px;
+            margin-top: 5px;
+            color: #888888;
+        }
+
+        .submit-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .submit-button button {
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: #ffffff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .submit-button button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        Y.A.P 2023
+    </div>
+    <div class="banner">
+        <img src="https://drive.google.com/file/d/1TknkYyBTNyPY7aZvKCY3MfEnawQBdSoW/view?usp=share_link" alt="Banner Photo">
+    </div>
+    <h1 class="form-heading">Career Guidance Seminar</h1>
+    <p class="description">YAP (Youth Awareness Program), an initiative by the youth of Sri Sathya Sai Seva Organization,
+        is designed around the five human values of Truth, Righteousness, Peace, Love, and Non-violence. YAP has been in
+        existence for over 20 years in more than 40 colleges in the city of Mumbai, in which thousands of students
+        participated in various value-based activities. The idea of YAP's new initiative, Career Guidance Seminar, is to
+        help young adults take informed decisions on their career paths.</p>
+    <div class="form-container">
+        <form action="submit_form.php" method="POST">
+            <div class="form-question">
+                <label for="name">Q1. Name<span style="color: red;">*</span>:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-question">
+                <label for="contact">Q2. Contact Number<span style="color: red;">*</span>:</label>
+                <input type="text" id="contact" name="contact" pattern="[0-9]{10}" required>
+                <span class="error-message">Please enter a valid 10-digit contact number.</span>
+            </div>
+
+            <div class="form-question">
+                <label for="email">Q3. Email:</label>
+                <input type="text" id="email" name="email">
+            </div>
+
+            <div class="form-question">
+                <label for="age">Q4. Age:</label>
+                <select id="age" name="age">
+                    <option value="">Select Age</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+
+            <div class="form-question">
+                <label for="class">Q5. Class/Graduation Level:</label>
+                <select id="class" name="class">
+                    <option value="Class 9">Class 9</option>
+                    <option value="Class 10">Class 10</option>
+                    <option value="Class 11 / FYJC (First Year, Junior College)">Class 11 / FYJC (First Year, Junior College)</option>
+                    <option value="Class 12 SYJC (Second Year, Junior College)">Class 12 SYJC (Second Year, Junior College)</option>
+                    <option value="1st Year - UG (Under Graduate)">1st Year - UG (Under Graduate)</option>
+                    <option value="2nd Year - UG (Under Graduate)">2nd Year - UG (Under Graduate)</option>
+                    <option value="3rd Year - UG (Under Graduate)">3rd Year - UG (Under Graduate)</option>
+                    <option value="Final Year - UG (Under Graduate)">Final Year - UG (Under Graduate)</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <p>Note: Those in classes 9th and 10th may skip the "Class/Graduation Level" question.</p>
+
+            <div class="form-question">
+                <label for="subject">Q6. Subject (Please choose as per your class):</label>
+                <select id="subject" name="subject">
+                    <option value="Science (Class 11 & 12)">Science (Class 11 &amp; 12)</option>
+                    <option value="Commerce (Class 11 & 12)">Commerce (Class 11 &amp; 12)</option>
+                    <option value="Arts (Class 11 & 12)">Arts (Class 11 &amp; 12)</option>
+                    <option value="B.Sc (Bachelors in Science)">B.Sc (Bachelors in Science)</option>
+                    <option value="BBM (Bachelors in Business Management)">BBM (Bachelors in Business Management)</option>
+                    <option value="BCOM (Bachelors in Commerce)">BCOM (Bachelors in Commerce)</option>
+                    <option value="BA">BA</option>
+                    <option value="BTech">BTech</option>
+                    <option value="BCA">BCA</option>
+                    <option value="BMS">BMS</option>
+                    <option value="BMM">BMM</option>
+                    <option value="MA">MA</option>
+                    <option value="MSC">MSC</option>
+                    <option value="MBA">MBA</option>
+                    <option value="MTech">MTech</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <p>Note: Choose 'Name not included' if your school/college name is not provided.</p>
+
+            <div class="form-question">
+                <label for="schoolInput">Q7. Name of School/College:</label>
+                <input type="text" id="schoolInput" list="schoolList" required>
+                <datalist id="schoolList">
+                    <option value="A. P. International School (ICSE), Mira road East, Thane"></option>
+                    <option value="A.F.A.C English High school, Chembur, Mumbai"></option>
+                    <option value="A.F.A.C Junior College Of Science & Commerce, Chembur, Mumbai"></option>
+                    <option value="A.V.S.Vidyamandir,Virar"></option>
+                    <option value="Annasaheb Vartak College of Arts, Commerce, Science, Vasai West, Virar"></option>
+                    <option value="Arvind Vasant Sawant Vidyamandir, Virar, Mumbai"></option>
+                    <!-- Add more options here -->
+                    <option value="Name not included"></option>
+                </datalist>
+            </div>
+            <!-- HTML code for the new question (Q8) -->
+            <div class="form-question">
+                <label for="career-field">Q8. Which field would you like to pursue for a career?<span style="color: red;">*</span></label>
+                <select id="career-field" name="career-field" required>
+                    <option value="">Select Field</option>
+                    <option value="Accounting, Banking & Finance (Accountant/ Finance Analyst/ Investment Banker)">Accounting, Banking & Finance (Accountant/ Finance Analyst/ Investment Banker)</option>
+                    <option value="Agriculture, Farming & Forestry (Farmer/ Environmentalist)">Agriculture, Farming & Forestry (Farmer/ Environmentalist)</option>
+                    <option value="Architecture and Construction (Architect/ Civil Engineer/ Interior Designer)">Architecture and Construction (Architect/ Civil Engineer/ Interior Designer)</option>
+                    <option value="Arts, Culture and Entertainment/ Performing Arts (Actor/ Comedian/ Musician/ Painter/ Poet/ Filmmaker/ Video Editor/ Graphic Designer/Photographer)">Arts, Culture and Entertainment/ Performing Arts (Actor/ Comedian/ Musician/ Painter/ Poet/ Filmmaker/ Video Editor/ Graphic Designer/Photographer)</option>
+                    <option value="Business & Entrepreneurship (Entrepreneur/ Business Analyst/ Manager/ Online Coach/ Digital Marketer/ Growth Hacker)">Business & Entrepreneurship (Entrepreneur/ Business Analyst/ Manager/ Online Coach/ Digital Marketer/ Growth Hacker)</option>
+                    <option value="Education & Research (Teacher/ Professor/ Researcher/ Librarian)">Education & Research (Teacher/ Professor/ Researcher/ Librarian)</option>
+                    <option value="Government & Military (Civil Services - IAS/ IPS/IFS, Defense - Army, Navy, Airforce)">Government & Military (Civil Services - IAS/ IPS/IFS, Defense - Army, Navy, Airforce)</option>
+                    <option value="Healthcare & Medicine (Doctor/ Nurse/ Nutritionist/ Therapist)">Healthcare & Medicine (Doctor/ Nurse/ Nutritionist/ Therapist)</option>
+                    <option value="Hospitality, Travel & Tourism (Cabin Crew/ Pilot/ Travel Agent/ Receptionist)">Hospitality, Travel & Tourism (Cabin Crew/ Pilot/ Travel Agent/ Receptionist)</option>
+                    <option value="Installation, Maintenance & Repair (Plumber/ Electrician/ Auto Mechanic)">Installation, Maintenance & Repair (Plumber/ Electrician/ Auto Mechanic)</option>
+                    <option value="Law, Public Policy, Enforcement & Safety (Lawyer/ Judge/ Secretary/ Firefighter/ Police)">Law, Public Policy, Enforcement & Safety (Lawyer/ Judge/ Secretary/ Firefighter/ Police)</option>
+                    <option value="Management and Administration (Human Resource/ Finance/ Operations/ I.T/ Marketing/ Sports/ Hotel)">Management and Administration (Human Resource/ Finance/ Operations/ I.T/ Marketing/ Sports/ Hotel)</option>
+                    <option value="Mass Media & Communications (Journalist/ Social Media Influencer/ YouTuber/ Blogger)">Mass Media & Communications (Journalist/ Social Media Influencer/ YouTuber/ Blogger)</option>
+                    <option value="Social, Charity and Community Service (Psychology/ Counseling/ Sociology/ Advisor/ Politician)">Social, Charity and Community Service (Psychology/ Counseling/ Sociology/ Advisor/ Politician)</option>
+                    <option value="Sports & Fitness (Cricketer/ Footballer/ Gym Trainer)">Sports & Fitness (Cricketer/ Footballer/ Gym Trainer)</option>
+                    <option value="STEM - Science, Technology, Engineering & Mathematics (Physicist/ Software Engineer/ Developer/ Data Scientist/ Archaeologist/ Actuaries)">STEM - Science, Technology, Engineering & Mathematics (Physicist/ Software Engineer/ Developer/ Data Scientist/ Archaeologist/ Actuaries)</option>
+                    <option value="Not yet decided">Not yet decided</option>
+                    <option value="Unable to decide">Unable to decide</option>
+                    <option value="Other">Other_____________</option>
+                </select>
+            </div>
+            <!-- HTML code for the new questions (Q9 to Q20) -->
+            <div class="form-question">
+                <label for="higher-education">Q9. Have you decided on pursuing any higher education in the area of your interest after school or college?<span style="color: red;">*</span></label>
+                <select id="higher-education" name="higher-education" required>
+                    <option value="">Select an option</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    <option value="Not decided">Not decided</option>
+                </select>
+            </div>
+
+            <div class="form-question">
+                <label>Q10. What are your long-term career aspirations? (Choose multiple options)</label><br>
+                <input type="checkbox" id="aspiration-salary" name="aspirations[]" value="To earn a high salary or have a better standard of living">
+                <label for="aspiration-salary">To earn a high salary or have a better standard of living</label><br>
+                <input type="checkbox" id="aspiration-prestige" name="aspirations[]" value="To attain a prestigious job title/position or a high status in society">
+                <label for="aspiration-prestige">To attain a prestigious job title/position or a high status in society</label><br>
+                <input type="checkbox" id="aspiration-work-life-balance" name="aspirations[]" value="To have more free time and work-life balance to spend quality time with friends and family">
+                <label for="aspiration-work-life-balance">To have more free time and work-life balance to spend quality time with friends and family</label><br>
+                <input type="checkbox" id="aspiration-impact" name="aspirations[]" value="To make a positive impact on society and help others">
+                <label for="aspiration-impact">To make a positive impact on society and help others</label><br>
+                <input type="checkbox" id="aspiration-passion" name="aspirations[]" value="To pursue a career that aligns with my passion and interests">
+                <label for="aspiration-passion">To pursue a career that aligns with my passion and interests</label><br>
+                <input type="checkbox" id="aspiration-not-thought" name="aspirations[]" value="I have not thought about it yet">
+                <label for="aspiration-not-thought">I have not thought about it yet</label><br>
+                <input type="checkbox" id="aspiration-other" name="aspirations[]" value="Other">
+                <label for="aspiration-other">Other:</label>
+                <input type="text" id="aspiration-other-text" name="aspiration-other-text">
+            </div>
+
+            <div class="form-question">
+                <label for="first-time-session">Q11. Is this the first time you are attending a career guidance session with us?<span style="color: red;">*</span></label>
+                <select id="first-time-session" name="first-time-session" required>
+                    <option value="">Select an option</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+
+            <div class="form-question">
+                <label for="attended-other-session">Q12. Have you attended any other career guidance session before?<span style="color: red;">*</span></label>
+                <select id="attended-other-session" name="attended-other-session" required>
+                    <option value="">Select an option</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+
+            <div class="form-question">
+                <label for="career-concerns">Q13. Do you have any career-related concerns or questions which you think we can help you with?<span style="color: red;">*</span></label>
+                <select id="career-concerns" name="career-concerns" required>
+                    <option value="">Select an option</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+
+            <div class="form-question" id="career-concerns-question" style="display: none;">
+                <label for="career-concerns-text">Q14. If Yes, feel free to drop in your question/concern here.</label>
+                <textarea id="career-concerns-text" name="career-concerns-text"></textarea>
+            </div>
+
+            <div class="form-question">
+                <label for="extracurricular-activities">Q15. Do you participate in any Extracurricular Activities?<span style="color: red;">*</span></label>
+                <select id="extracurricular-activities" name="extracurricular-activities" required>
+                    <option value="">Select an option</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+
+            <div class="form-question" id="extracurricular-activities-question" style="display: none;">
+                <label for="extracurricular-activities-text">Q16. If Yes, Name a few:</label>
+                <input type="text" id="extracurricular-activities-text" name="extracurricular-activities-text">
+            </div>
+
+            <div class="form-question">
+                <label for="session-expectations">Q17. What do you expect to achieve from this session?</label>
+                <textarea id="session-expectations" name="session-expectations"></textarea>
+            </div>
+
+            <div class="form-question">
+                <label for="service-activities">Q18. Would you be interested in contributing time to service activities that help the society?<span style="color: red;">*</span></label>
+                <select id="service-activities" name="service-activities" required>
+                    <option value="">Select an option</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    <option value="Other">Other________</option>
+                </select>
+            </div>
+
+            <div class="form-question">
+                <label for="balvikas-student">Q19. Are you a Balvikas student?<span style="color: red;">*</span></label>
+                <select id="balvikas-student" name="balvikas-student" required>
+                    <option value="">Select an option</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+
+            <div class="form-question" id="balvikas-group-question" style="display: none;">
+                <label for="balvikas-group">Q20. If yes, which group are you in?</label>
+                <select id="balvikas-group" name="balvikas-group">
+                    <option value="">Select a group</option>
+                    <option value="Group 1">Group 1</option>
+                    <option value="Group 2">Group 2</option>
+                    <option value="Group 3">Group 3</option>
+                    <option value="Group 4">Group 4</option>
+                    <option value="Group 5">Group 5</option>
+                </select>
+            </div>
+        </form>
+    </div>
+
+    <!-- End of HTML code -->
+
+    <script>
+        // JavaScript code
+        // Add your JavaScript code here
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.getElementById('career-guidance-form');
+            const submitButton = document.getElementById('submit-button');
+            const nameInput = document.getElementById('name');
+
+            // Show/hide questions based on user responses
+            function toggleQuestions() {
+                const careerConcernsQuestion = document.getElementById('career-concerns-question');
+                const extracurricularActivitiesQuestion = document.getElementById('extracurricular-activities-question');
+                const balvikasGroupQuestion = document.getElementById('balvikas-group-question');
+
+                const careerConcernsSelect = document.getElementById('career-concerns');
+                const extracurricularActivitiesSelect = document.getElementById('extracurricular-activities');
+                const balvikasStudentSelect = document.getElementById('balvikas-student');
+
+                careerConcernsQuestion.style.display = careerConcernsSelect.value === 'Yes' ? 'block' : 'none';
+                extracurricularActivitiesQuestion.style.display = extracurricularActivitiesSelect.value === 'Yes' ? 'block' : 'none';
+                balvikasGroupQuestion.style.display = balvikasStudentSelect.value === 'Yes' ? 'block' : 'none';
+            }
+
+            // Event listeners
+            submitButton.addEventListener('click', function(event) {
+                event.preventDefault();
+                const name = nameInput.value;
+                // Validate the form here before submission
+
+                // Construct the custom message
+                const message = "Hi " + name + ", Thank you for your response! See you on the 10th of June!";
+
+                // Show the custom message to the user
+                alert(message);
+
+                // Submit the form
+                form.submit();
+            });
+
+            // Listen for change events on relevant selects
+            const careerConcernsSelect = document.getElementById('career-concerns');
+            careerConcernsSelect.addEventListener('change', toggleQuestions);
+
+            const extracurricularActivitiesSelect = document.getElementById('extracurricular-activities');
+            extracurricularActivitiesSelect.addEventListener('change', toggleQuestions);
+
+            const balvikasStudentSelect = document.getElementById('balvikas-student');
+            balvikasStudentSelect.addEventListener('change', toggleQuestions);
+
+            // Initial toggle check
+            toggleQuestions();
+        });
+    </script>
+</body>
+
+</html>
+
